@@ -1,9 +1,20 @@
 ﻿using System;
-
-public class HelloWorld
+namespace CelsiusToKelvin
 {
-    public static void Main()
+    public class Program
     {
-        Console.WriteLine("Hello, World!");
+        public static void Main()
+        {
+            const string MsgInput = "Enter temperature in Celsius: ";
+            const string MsgResult = "Temperature in Kelvin: ";
+
+            double celsius, kelvin;
+
+            Console.WriteLine(MsgInput);
+            celsius = Convert.ToDouble(Console.ReadLine());
+            kelvin = celsius + 273.15;
+            Console.WriteLine(MsgResult + kelvin);
+
+        }
     }
 }
