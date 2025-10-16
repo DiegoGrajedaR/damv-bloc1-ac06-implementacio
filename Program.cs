@@ -1,9 +1,21 @@
 ﻿using System;
-
-public class HelloWorld
+namespace EuroToDollar
 {
-    public static void Main()
+    public class Program
     {
-        Console.WriteLine("Hello, World!");
+        public static void Main()
+        {
+            const decimal ExchangeRate = 1.12M;
+            const string MsgInput = "Enter amount in euros: ";
+            const string MsgResult = "Amount in dollars: ";
+
+            decimal euros, dollars;
+
+            Console.WriteLine(MsgInput);
+            euros = Convert.ToDecimal(Console.ReadLine());
+            dollars = euros * ExchangeRate;
+            Console.WriteLine(MsgResult + dollars);
+
+        }
     }
 }
